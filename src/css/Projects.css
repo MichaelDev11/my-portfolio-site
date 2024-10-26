@@ -1,0 +1,249 @@
+.projects-container {
+  margin-left: 80px;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-content {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1200px;
+  padding: 3rem;
+  margin: 2rem;
+}
+
+.projects-content h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-buttons button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.filter-buttons button.active {
+  background-color: #60A5FA;
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* Changed to exactly 2 columns */
+  gap: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  position: relative;  /* Added for better control */
+}
+
+.project-image img {
+  position: absolute;  /* Added for consistent centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;  /* Changed from 100% */
+  height: auto;  /* Changed from 100% */
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Specific handling for SVG files */
+.project-image img[src$=".png"],
+.project-image img[src$=".svg"] {
+    transform: translate(calc(-50% - 24px), -50%) !important;  /* Offset by 24px to the left */
+    padding: 0.5rem;
+}
+
+/* Specific handling for other image formats */
+.project-image img[src$=".png"],
+.project-image img[src$=".jpg"],
+.project-image img[src$=".jpeg"] {
+  padding: 1rem;
+}
+
+.project-image img[src$=".png"] {
+    padding: 1rem;
+  }
+
+/* Modified hover effect to work with absolute positioning */
+.project-card:hover .project-image img {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Modified hover effect for SVGs */
+.project-card:hover .project-image img[src$=".svg"] {
+    transform: translate(calc(-50% - 24px), -50%) scale(1.05) !important;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  font-size: 1.3rem;
+  color: #2d2d2d;
+  margin-bottom: 0.8rem;
+}
+
+.project-info p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background-color: #f0f0f0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #60A5FA;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #3b82f6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-content {
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;  /* Single column on mobile */
+  }
+
+  .projects-container {
+    margin-left: 0;  /* Remove left margin on mobile */
+    margin-bottom: 60px;  /* Space for bottom nav */
+  }
+
+  .project-image {
+    height: 160px;  /* Reduced height */
+    padding: 1rem;
+  }
+  
+  .project-image img {
+    max-width: 75%;  /* Reduced max-width */
+    max-height: 75%;  /* Reduced max-height */
+  }
+
+  /* Adjust SVG and PNG specific positioning for mobile */
+  .project-image img[src$=".svg"],
+  .project-image img[src$=".png"] {
+    transform: translate(calc(-50% - 12px), -50%) !important;  /* Reduced offset */
+    padding: 0.75rem;  /* Reduced padding */
+  }
+
+  /* Adjust hover effects for mobile */
+  .project-card:hover .project-image img[src$=".svg"],
+  .project-card:hover .project-image img[src$=".png"] {
+    transform: translate(calc(-50% - 12px), -50%) scale(1.05) !important;
+  }
+}
+
+/* Handle landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .projects-container {
+    margin-left: 60px;  /* Adjust for narrower sidebar in landscape */
+  }
+}
+
+/* Handle tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-container {
+    margin-left: 70px;  /* Match tablet nav width */
+  }
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 480px) {
+  .project-image {
+    height: 140px;  /* Further reduced height */
+  }
+  
+  .project-image img {
+    max-width: 70%;  /* Further reduced max-width */
+    max-height: 70%;  /* Further reduced max-height */
+  }
+}

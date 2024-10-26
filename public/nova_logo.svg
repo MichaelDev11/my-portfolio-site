@@ -1,0 +1,43 @@
+
+      <svg width="200" height="100" viewBox="0 0 200 100" 
+           xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        
+      <defs>
+        
+          <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#dbffe1;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#eabefe;stop-opacity:1" />
+          </linearGradient>
+        
+        
+          <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#bb1adb;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00a34f;stop-opacity:1" />
+          </linearGradient>
+        
+      </defs>
+    
+        
+      <rect x="2" y="2" 
+        width="196" height="96"
+        rx="40" ry="40" 
+        fill="url(#borderGradient)" stroke="none" stroke-width="0" />
+    
+        
+      <text x="117" y="50" dominant-baseline="middle" text-anchor="middle"
+        font-family="'Verdana', sans-serif" font-size="24px" fill="url(#textGradient)"
+        font-style="normal" font-weight="normal">
+        NOVA
+      </text>
+    
+        
+        <g transform="translate(33, 36)">
+          <g fill="url(#textGradient)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+        <path  d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40c-35.3 0-64 28.7-64 64l-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0 0 56-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0 0 56-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0c0 35.3 28.7 64 64 64l0 40c0 13.3 10.7 24 24 24s24-10.7 24-24l0-40 56 0 0 40c0 13.3 10.7 24 24 24s24-10.7 24-24l0-40 56 0 0 40c0 13.3 10.7 24 24 24s24-10.7 24-24l0-40c35.3 0 64-28.7 64-64l40 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-40 0 0-56 40 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-40 0 0-56 40 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-40 0c0-35.3-28.7-64-64-64l0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40-56 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40-56 0 0-40zM160 128l192 0c17.7 0 32 14.3 32 32l0 192c0 17.7-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32l0-192c0-17.7 14.3-32 32-32zm192 32l-192 0 0 192 192 0 0-192z" />
+    </svg>
+          </g>
+        </g>
+      
+      </svg>
+    
