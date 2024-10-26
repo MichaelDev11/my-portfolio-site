@@ -12,8 +12,9 @@ import {
   faCar,
   faCode,
   faDumbbell,
-  faHandFist,
+  faHandFist
 } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import '../css/Home.css';
 
 const Home = () => {
@@ -45,9 +46,15 @@ const Home = () => {
           </motion.h1>
           
           <motion.div className="personal-info">
-            {["20 years old", "Tampa, Florida", "Computer Engineering Major", "Physics Minor"].map((text, index) => (
+            {[
+              "20 years old",
+              "Tampa, Florida", 
+              "Computer Engineering Major", 
+              "Physics Minor",
+              { text: "LinkedIn", link: "https://www.linkedin.com/in/michael-perkins-569a31258" }  // Replace with your LinkedIn URL
+            ].map((item, index) => (
               <motion.span
-                key={text}
+                key={typeof item === 'string' ? item : item.text}
                 initial={{ x: -30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.4 + (index * 0.1), duration: 0.5 }}
@@ -56,7 +63,18 @@ const Home = () => {
                 {index === 1 && <FontAwesomeIcon icon={faLocationDot} />}
                 {index === 2 && <FontAwesomeIcon icon={faGraduationCap} />}
                 {index === 3 && <FontAwesomeIcon icon={faAtom} />}
-                {" " + text}
+                {index === 4 && (
+                  <a 
+                    href={(item as {link: string}).link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="linkedin-link"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                    {" LinkedIn"}
+                  </a>
+                )}
+                {index < 4 && " " + item}
               </motion.span>
             ))}
           </motion.div>

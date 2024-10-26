@@ -210,3 +210,13 @@
 .specialty-card:hover, .hobby-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
+.linkedin-link {
+  color: #0077b5;  /* LinkedIn blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+  color: #005582;  /* Darker shade for hover */
+}

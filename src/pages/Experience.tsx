@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faGaugeHigh,
   faGraduationCap,
-  faBriefcase
+  faBriefcase,
+  faDownload
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import '../css/Experience.css';
@@ -48,6 +49,20 @@ const Experience = () => {
             robotics, and electronic systems. Passionate about creating innovative solutions and
             continuously expanding technical expertise.
           </p>
+          <motion.button 
+            className="resume-button"
+            onClick={() => window.open('/resume.pdf', '_blank')}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            whileHover={{ 
+              y: -2,
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
+            }}
+            whileTap={{ y: 0 }}
+          >
+            <FontAwesomeIcon icon={faDownload} /> Download Resume
+          </motion.button>
         </motion.div>
 
         <motion.div 
