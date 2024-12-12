@@ -115,9 +115,21 @@ const Home = () => {
           
           <div className="specialties-grid">
             {[
-              { icon: faDisplay, title: "Full Stack Development" },
-              { icon: faRobot, title: "Robotics" },
-              { icon: faMicrochip, title: "Circuitry" }
+              { 
+                icon: faDisplay, 
+                title: "Full Stack Development",
+                description: "Proficient in building complete web applications using modern technologies like React, Node.js, and various databases. Experienced in creating responsive, user-friendly interfaces and robust backend systems."
+              },
+              { 
+                icon: faRobot, 
+                title: "Robotics",
+                description: "Experienced in designing and programming autonomous systems, working with sensors and actuators, and implementing control algorithms. Skilled in ROS and various robotics platforms."
+              },
+              { 
+                icon: faMicrochip, 
+                title: "Circuitry",
+                description: "Knowledgeable in electronic circuit design, PCB layout, and microcontroller programming. Experienced with Arduino, ESP32, and various electronic components and testing equipment."
+              }
             ].map((specialty, index) => (
               <motion.div 
                 key={specialty.title}
@@ -134,12 +146,7 @@ const Home = () => {
                   <FontAwesomeIcon icon={specialty.icon} />
                 </div>
                 <h3>{specialty.title}</h3>
-                <p>
-                  Proficient in building complete web applications using modern 
-                  technologies like React, Node.js, and various databases. 
-                  Experienced in creating responsive, user-friendly interfaces 
-                  and robust backend systems.
-                </p>
+                <p>{specialty.description}</p>
               </motion.div>
             ))}
           </div>
