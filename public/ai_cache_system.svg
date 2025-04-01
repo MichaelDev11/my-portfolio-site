@@ -1,0 +1,30 @@
+
+      <svg width="200" height="100" viewBox="0 0 200 100" 
+           xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        
+      <defs>
+        
+        
+          <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#332828;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#17de77;stop-opacity:1" />
+          </linearGradient>
+        
+      </defs>
+    
+        
+      <rect x="2" y="2" 
+        width="196" height="96"
+        rx="20" ry="20" 
+        fill="none" stroke="none" stroke-width="0" />
+    
+        
+      <text x="100" y="50" dominant-baseline="middle" text-anchor="middle"
+        font-family="'Verdana', sans-serif" font-size="24px" fill="url(#textGradient)"
+        font-style="normal" font-weight="normal">
+        AICache
+      </text>
+    
+        
+      </svg>
+    

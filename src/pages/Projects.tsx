@@ -27,6 +27,24 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "AI-Optimized Cache System",
+    description: "An AI-driven cache management system using Xilinx ISE and Verilog. The system optimizes cache performance by leveraging reinforcement learning to predict which data should be retained in cache for improved hit rates.",
+    type: "software",
+    technologies: ["Verilog", "Xilinx ISE", "Cache Design", "AI", "FPGA", "Machine Learning"],
+    githubLink: "https://github.com/MichaelDev11/ai-cache",
+    image: "/ai_cache_system.svg"
+  },
+  {
+    id: 2,
+    title: "AvaAI",
+    description: "Multi-tenant e-commerce platform with agentic AI solutions. Enables non-technical users to build complete storefronts and manage inventory through natural language conversation. Transforms brick-and-mortar businesses into operational online stores in minutes.",
+    type: "web",
+    technologies: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "AI", "E-commerce"],
+    liveLink: "https://joinava.ai",
+    image: "/avaai_logo.svg"
+  },
+  {
+    id: 3,
     title: "Portfolio Website",
     description: "Personal portfolio website built with React and TypeScript",
     type: "web",
@@ -36,7 +54,7 @@ const projects: Project[] = [
     image: "/portfolio_logo.svg"
   },
   {
-    id: 2,
+    id: 4,
     title: "StartUpGeniusAI",
     description: "StartUpGeniusAI is an AI-powered platform that turns user ideas into customized business plans, offering product suggestions, strategies, and marketing insights. Premium users gain access to detailed market trends, personalized consulting, and an exclusive forum.",
     type: "web",
@@ -45,7 +63,7 @@ const projects: Project[] = [
     image: "/startupgeniusai.png"
   },
   {
-    id: 3,
+    id: 5,
     title: "PasswordManager",
     description: "Developed a C++ Password Manager with secure password generation, Caesar cipher encryption, and a user-friendly authentication system. Mentored students on programming fundamentals and C++ best practices.",
     type: "software",
@@ -54,7 +72,7 @@ const projects: Project[] = [
     image: "/password_manager_logo.svg"
   },
   {
-    id: 4,
+    id: 6,
     title: "Student Management System",
     description: "Developed a C-based Student Management System with a menu-driven interface. The system allows for student information, course information, and more.",
     type: "software",
@@ -63,7 +81,7 @@ const projects: Project[] = [
     image: "/sms_logo.svg"
   },
   {
-    id: 5,
+    id: 7,
     title: "NOVA Smart Home Assistance",
     description: "Building a multi-display smart assistant on Raspberry Pi with screens for clock, weather, and diagnostics, plus voice-controlled power-saving. Integrating custom sensors for real-time environmental monitoring.",
     type: "robotics",
@@ -71,7 +89,7 @@ const projects: Project[] = [
     image: "/nova_logo.svg"
   },
   {
-    id: 6,
+    id: 8,
     title: "DistaCharge",
     description: "Researching an ongoing project to develop wireless charging at a distance. Exploring methods like Magnetic Induction and Resonant Inductive Coupling to create a desk-mounted device that directs magnetic waves for efficient, targeted charging.",
     type: "robotics",

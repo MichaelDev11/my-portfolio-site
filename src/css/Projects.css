@@ -179,46 +179,82 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .projects-container {
+    margin-left: 0;
+    margin-bottom: 60px;
+    padding: 1rem;
+  }
+
   .projects-content {
-    padding: 2rem;
-    margin: 1rem;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    width: 100%;
+    max-width: none;
+  }
+
+  .projects-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .filter-buttons {
-    flex-direction: column;
-    align-items: stretch;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  .filter-buttons button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;  /* Single column on mobile */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
   }
 
-  .projects-container {
-    margin-left: 0;  /* Remove left margin on mobile */
-    margin-bottom: 60px;  /* Space for bottom nav */
+  .project-card {
+    margin: 0;
   }
 
   .project-image {
-    height: 160px;  /* Reduced height */
+    height: 180px;
+  }
+
+  .project-info {
+    padding: 1.2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-info p {
+    font-size: 0.95rem;
+  }
+
+  .technologies {
+    gap: 0.4rem;
+  }
+
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+  }
+}
+
+/* Additional responsive adjustments for very small screens */
+@media (max-width: 360px) {
+  .projects-content {
     padding: 1rem;
   }
-  
-  .project-image img {
-    max-width: 75%;  /* Reduced max-width */
-    max-height: 75%;  /* Reduced max-height */
+
+  .project-image {
+    height: 160px;
   }
 
-  /* Adjust SVG and PNG specific positioning for mobile */
-  .project-image img[src$=".svg"],
-  .project-image img[src$=".png"] {
-    transform: translate(calc(-50% - 12px), -50%) !important;  /* Reduced offset */
-    padding: 0.75rem;  /* Reduced padding */
-  }
-
-  /* Adjust hover effects for mobile */
-  .project-card:hover .project-image img[src$=".svg"],
-  .project-card:hover .project-image img[src$=".png"] {
-    transform: translate(calc(-50% - 12px), -50%) scale(1.05) !important;
+  .project-info {
+    padding: 1rem;
   }
 }
 
