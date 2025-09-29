@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faDisplay, 
@@ -19,12 +20,26 @@ import '../css/Home.css';
 
 const Home = () => {
   return (
-    <motion.div 
-      className="home-container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-    >
+    <>
+      <Helmet>
+        <title>Michael Perkins - Computer Engineer | Portfolio</title>
+        <meta name="description" content="Michael Perkins is a Computer Engineering student at USF with expertise in full-stack development, robotics, and electronic systems. Passionate about creating innovative solutions." />
+        <meta name="keywords" content="Michael Perkins, Computer Engineer, Software Developer, Full Stack, React, Node.js, Robotics, Electronics, USF, Portfolio" />
+        <meta name="author" content="Michael Perkins" />
+        <meta property="og:title" content="Michael Perkins - Computer Engineer | Portfolio" />
+        <meta property="og:description" content="Computer Engineering student with expertise in full-stack development, robotics, and electronic systems. Passionate about creating innovative solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mikeperkins.xyz" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Michael Perkins - Computer Engineer" />
+        <meta name="twitter:description" content="Computer Engineering student with expertise in full-stack development, robotics, and electronic systems." />
+      </Helmet>
+      <motion.div 
+        className="home-container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
       <motion.div 
         className="about-card"
         initial={{ scale: 0.95, opacity: 0 }}
@@ -260,6 +275,7 @@ const Home = () => {
         </motion.div>
       </motion.div>
     </motion.div>
+    </>
   );
 };
 

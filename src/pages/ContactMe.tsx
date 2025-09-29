@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faEnvelope,
@@ -18,12 +19,26 @@ const ContactMe = () => {
   };
 
   return (
-    <motion.div 
-      className="contact-container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <>
+      <Helmet>
+        <title>Contact - Michael Perkins | Computer Engineer</title>
+        <meta name="description" content="Get in touch with Michael Perkins, Computer Engineering student at USF. Available for remote work nationwide. Contact via email, phone, LinkedIn, or GitHub." />
+        <meta name="keywords" content="Michael Perkins, Contact, Computer Engineer, USF, Email, Phone, LinkedIn, GitHub, Remote Work, Collaboration" />
+        <meta name="author" content="Michael Perkins" />
+        <meta property="og:title" content="Contact - Michael Perkins | Computer Engineer" />
+        <meta property="og:description" content="Get in touch with Michael Perkins, Computer Engineering student at USF. Available for remote work nationwide." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mikeperkins.xyz/contact" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact - Michael Perkins" />
+        <meta name="twitter:description" content="Get in touch with Michael Perkins, Computer Engineering student at USF. Available for remote work nationwide." />
+      </Helmet>
+      <motion.div 
+        className="contact-container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
       <motion.div 
         className="contact-content"
         initial={{ scale: 0.95, opacity: 0 }}
@@ -77,14 +92,14 @@ const ContactMe = () => {
             className="contact-card"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
             <div className="contact-card-icon">
               <FontAwesomeIcon icon={faLocationDot} />
             </div>
             <h3>Location</h3>
-            <p>Tampa / Cocoa, Florida</p>
+            <p>FL, TN, TX</p>
             <p className="location-detail">Available for remote work nationwide</p>
           </motion.div>
           
@@ -95,7 +110,7 @@ const ContactMe = () => {
             className="contact-card"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
             <div className="contact-card-icon linkedin">
@@ -113,7 +128,7 @@ const ContactMe = () => {
             className="contact-card"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
+            transition={{ delay: 0.9, duration: 0.5 }}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
             <div className="contact-card-icon github">
@@ -129,13 +144,14 @@ const ContactMe = () => {
           className="contact-message"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.5 }}
+          transition={{ delay: 1.0, duration: 0.5 }}
         >
           <h3>Looking forward to hearing from you!</h3>
           <p>Whether you have a project in mind or just want to chat about tech, I'll get back to you as soon as possible.</p>
         </motion.div>
       </motion.div>
     </motion.div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faGaugeHigh,
@@ -21,7 +22,21 @@ const Experience = () => {
   ];
 
   return (
-    <div className="experience-container">
+    <>
+      <Helmet>
+        <title>Experience & Skills - Michael Perkins | Computer Engineer</title>
+        <meta name="description" content="Michael Perkins' professional experience, technical skills, and education. Computer Engineering student at USF with expertise in full-stack development, robotics, and electronic systems." />
+        <meta name="keywords" content="Michael Perkins, Experience, Skills, Computer Engineer, USF, Education, Work Experience, Technical Skills, Catalogo, Principal Engineer" />
+        <meta name="author" content="Michael Perkins" />
+        <meta property="og:title" content="Experience & Skills - Michael Perkins" />
+        <meta property="og:description" content="Professional experience, technical skills, and education of Computer Engineering student Michael Perkins." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mikeperkins.xyz/experience" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Experience & Skills - Michael Perkins" />
+        <meta name="twitter:description" content="Professional experience, technical skills, and education of Computer Engineering student Michael Perkins." />
+      </Helmet>
+      <div className="experience-container">
       <div className="experience-content">
         <div className="intro-section">
           <p>
@@ -59,7 +74,8 @@ const Experience = () => {
                 <li><span className="skill-icon-small">🐍</span> <span className="skill-highlight">Python</span></li>
                 <li><span className="skill-icon-small">⚡</span> <span className="skill-highlight">C/C++</span></li>
                 <li><span className="skill-icon-small">🌐</span> <span className="skill-highlight">JavaScript/TypeScript</span></li>
-                <li><span className="skill-icon-small">☕</span> Java</li>
+                <li><span className="skill-icon-small">🎯</span> <span className="skill-highlight">Dart</span></li>
+                <li><span className="skill-icon-small">🔧</span> <span className="skill-highlight">RISC-V Assembly</span></li>
               </ul>
             </div>
             
@@ -88,6 +104,9 @@ const Experience = () => {
                 <li><span className="skill-icon-small">🗄️</span> <span className="skill-highlight">MongoDB</span></li>
                 <li><span className="skill-icon-small">💾</span> <span className="skill-highlight">Database Design</span></li>
                 <li><span className="skill-icon-small">🔐</span> <span className="skill-highlight">Authentication</span></li>
+                <li><span className="skill-icon-small">💳</span> <span className="skill-highlight">Stripe Integration</span></li>
+                <li><span className="skill-icon-small">🔄</span> <span className="skill-highlight">RESTful APIs</span></li>
+                <li><span className="skill-icon-small">⚡</span> <span className="skill-highlight">Next.js</span></li>
               </ul>
             </div>
             
@@ -97,11 +116,28 @@ const Experience = () => {
                 Hardware
               </h3>
               <ul className="skill-list">
-                <li><span className="skill-icon-small">🖥️</span> Spartan 6 FPGA</li>
-                <li><span className="skill-icon-small">🔋</span> Arduino</li>
-                <li><span className="skill-icon-small">🥧</span> Raspberry Pi</li>
-                <li><span className="skill-icon-small">💻</span> RISC-V</li>
-                <li><span className="skill-icon-small">🔌</span> Embedded Systems</li>
+                <li><span className="skill-icon-small">🖥️</span> <span className="skill-highlight">Spartan-6 FPGA</span></li>
+                <li><span className="skill-icon-small">🔋</span> <span className="skill-highlight">Arduino</span></li>
+                <li><span className="skill-icon-small">🥧</span> <span className="skill-highlight">Raspberry Pi</span></li>
+                <li><span className="skill-icon-small">💻</span> <span className="skill-highlight">RISC-V</span></li>
+                <li><span className="skill-icon-small">🔌</span> <span className="skill-highlight">ESP32</span></li>
+                <li><span className="skill-icon-small">📡</span> <span className="skill-highlight">I2C, UART, USB</span></li>
+                <li><span className="skill-icon-small">🧠</span> <span className="skill-highlight">Digital Logic Design</span></li>
+                <li><span className="skill-icon-small">💾</span> <span className="skill-highlight">DDR2 DRAM</span></li>
+              </ul>
+            </div>
+            
+            <div className="skill-category">
+              <h3>
+                <span className="skill-category-icon">🛠️</span>
+                Tools & Testing
+              </h3>
+              <ul className="skill-list">
+                <li><span className="skill-icon-small">⚡</span> <span className="skill-highlight">SPICE/HSPICE</span></li>
+                <li><span className="skill-icon-small">🔧</span> <span className="skill-highlight">RARS</span></li>
+                <li><span className="skill-icon-small">📝</span> <span className="skill-highlight">Git</span></li>
+                <li><span className="skill-icon-small">🔄</span> <span className="skill-highlight">CI/CD Practices</span></li>
+                <li><span className="skill-icon-small">🧪</span> <span className="skill-highlight">Agile Development</span></li>
               </ul>
             </div>
           </div>
@@ -121,7 +157,7 @@ const Experience = () => {
                 <p className="timeline-date">2022 - December 2025</p>
                 <p>B.S. Computer Engineering</p>
                 <p>Minor in Physics</p>
-                <p>GPA: 3.56</p>
+                <p>GPA: 3.57</p>
                 <div style={{ marginTop: "1rem" }}>
                   <h4>Relevant Coursework:</h4>
                   <ul>
@@ -147,10 +183,10 @@ const Experience = () => {
             </div>
             <div className="timeline">
               <div className="timeline-item">
-                <h3>Dedicated Engineer</h3>
-                <p className="timeline-date">2024 - Present</p>
+                <h3>Principal Engineer</h3>
+                <p className="timeline-date">Sep 2024 - Sep 2025</p>
                 <p>
-                  AvaAI{" "}
+                  Catalogo{" "}
                   <a 
                     href="https://joinava.ai" 
                     target="_blank" 
@@ -167,10 +203,10 @@ const Experience = () => {
                   </a>
                 </p>
                 <ul>
-                  <li>Led the development of an AI-powered e-commerce platform that transforms brick-and-mortar businesses into fully operational online stores</li>
-                  <li>Built custom storefront generation system using React, TypeScript, and Node.js, reducing traditional development time from weeks to minutes</li>
-                  <li>Integrated agentic AI solutions enabling non-technical users to manage inventory and operations through natural language conversations</li>
-                  <li>Implemented scalable backend architecture supporting multi-tenant platform capabilities</li>
+                  <li>Led end-to-end development of an AI-powered, multi-tenant e-commerce and inventory management platform using React, TypeScript, and Node.js/Express.js</li>
+                  <li>Reduced merchant setup time from weeks to under 20 minutes by architecting automated backend systems and data pipelines</li>
+                  <li>Implemented automated testing and deployment procedures, enhancing system reliability through TDD and CI/CD practices</li>
+                  <li>Architected scalable systems for onboarding, product enrichment, payments (via Stripe integration), and API-driven integrations</li>
                 </ul>
               </div>
               
@@ -236,6 +272,7 @@ const Experience = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

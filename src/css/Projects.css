@@ -74,57 +74,38 @@
   transform: translateY(-5px);
 }
 
-.project-image {
+.project-icon {
   width: 100%;
   height: 200px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f8f9fa;
-  padding: 1.5rem;
-  position: relative;  /* Added for better control */
+  position: relative;
+  overflow: hidden;
 }
 
-.project-image img {
-  position: absolute;  /* Added for consistent centering */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;  /* Changed from 100% */
-  height: auto;  /* Changed from 100% */
-  max-width: 85%;
-  max-height: 85%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+.project-icon svg {
+  font-size: 4rem;
+  color: white;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-/* Specific handling for SVG files */
-.project-image img[src$=".png"],
-.project-image img[src$=".svg"] {
-    transform: translate(calc(-50% - 24px), -50%) !important;  /* Offset by 24px to the left */
-    padding: 0.5rem;
+.project-card:hover .project-icon svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-/* Specific handling for other image formats */
-.project-image img[src$=".png"],
-.project-image img[src$=".jpg"],
-.project-image img[src$=".jpeg"] {
-  padding: 1rem;
-}
-
-.project-image img[src$=".png"] {
-    padding: 1rem;
-  }
-
-/* Modified hover effect to work with absolute positioning */
-.project-card:hover .project-image img {
-  transform: translate(-50%, -50%) scale(1.05);
-}
-
-/* Modified hover effect for SVGs */
-.project-card:hover .project-image img[src$=".svg"] {
-    transform: translate(calc(-50% - 24px), -50%) scale(1.05) !important;
+/* Add a subtle gradient overlay for better visual appeal */
+.project-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
 }
 
 .project-info {
@@ -217,8 +198,12 @@
     margin: 0;
   }
 
-  .project-image {
+  .project-icon {
     height: 180px;
+  }
+  
+  .project-icon svg {
+    font-size: 3rem;
   }
 
   .project-info {
@@ -249,8 +234,12 @@
     padding: 1rem;
   }
 
-  .project-image {
+  .project-icon {
     height: 160px;
+  }
+  
+  .project-icon svg {
+    font-size: 2.5rem;
   }
 
   .project-info {
@@ -274,12 +263,11 @@
 
 /* Additional responsive adjustments */
 @media (max-width: 480px) {
-  .project-image {
+  .project-icon {
     height: 140px;  /* Further reduced height */
   }
   
-  .project-image img {
-    max-width: 70%;  /* Further reduced max-width */
-    max-height: 70%;  /* Further reduced max-height */
+  .project-icon svg {
+    font-size: 2rem;  /* Smaller icons for very small screens */
   }
 }
